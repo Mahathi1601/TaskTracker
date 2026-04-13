@@ -1,6 +1,8 @@
 # TaskTracker
 A gentle task tracker with daily tasks, weekly/monthly goals, progress sliders, and a streak counter.
 
+🔗 Live Demo: https://mahathi1601.github.io/TaskTracker/
+
 ## Features
 - 📅 Click any date to add tasks
 - 🎚️ Progress sliders (0-100%)
