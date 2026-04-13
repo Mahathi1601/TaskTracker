@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Task Tracker </title>
+  <link rel="stylesheet" href="task.css" />
+</head>
+
+<body>
+<div class="planner-container">
+  <div class="header">
+    <div class="title-section">
+      <h1>🌿 Track your life </h1>
+      <p>daily wins · weekly rhythm · monthly dreams</p>
+    </div>
+    <div class="streak-card" id="streakWidget">
+      <div class="streak-flame">🔥</div>
+      <div class="streak-info">
+        <div class="streak-number" id="streakCountDisplay">0</div>
+        <div class="streak-label">day streak</div>
+      </div>
+      <button class="reset-streak" id="resetStreakBtn" title="reset streak">↻</button>
+    </div>
+    <button class="add-task-btn" id="globalAddTaskBtn">+ new task for selected day</button>
+  </div>
+
+  <div class="dashboard">
+    <!-- CALENDAR -->
+    <div class="calendar-panel">
+      <h3>📅 Calendar</h3>
+      <div class="calendar-header">
+        <span class="month-year" id="monthYearDisplay">May 2026</span>
+        <div class="nav-buttons">
+          <button id="prevMonthBtn">←</button>
+          <button id="nextMonthBtn">→</button>
+        </div>
+      </div>
+      <div class="weekdays">
+        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+      </div>
+      <div id="calendarDaysContainer" class="calendar-days"></div>
+      <div style="font-size: 0.7rem; margin-top: 1rem; text-align: center; color:#8fbcb2;">click any date</div>
+    </div>
+
+    <!-- DAILY TASK PANEL -->
+    <div class="tasks-panel">
+      <div class="selected-date-badge" id="selectedDateBadge">📌 selected: --</div>
+      <h3 style="font-weight: 500; margin-bottom: 0.5rem;">✎ daily intentions</h3>
+      <ul class="task-list" id="taskListContainer">
+        <li class="empty-message">✨ select a date</li>
+      </ul>
+      <div class="add-task-form">
+        <input type="text" id="newTaskInput" placeholder="write a daily plan..." autocomplete="off">
+        <button id="addTaskBtn">➕ add</button>
+      </div>
+      <div class="daily-summary" id="dailySummary">
+        <span>📋 today's progress</span>
+        <span class="progress-stats" id="progressStats">0% completed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEKLY & MONTHLY GOALS -->
+  <div class="goals-dashboard">
+    <div class="tasks-panel" style="flex: 1;">
+      <div class="selected-date-badge" id="selectedWeekBadge">📌 week of: --</div>
+      <h3>🌱 weekly goals</h3>
+      <ul class="task-list" id="weeklyListContainer">
+        <li class="empty-message">✨ add weekly goals</li>
+      </ul>
+      <div class="add-task-form">
+        <input type="text" id="newWeeklyInput" placeholder="weekly goal..." autocomplete="off">
+        <button id="addWeeklyBtn">➕ add</button>
+      </div>
+      <div class="daily-summary" id="weeklySummary">
+        <span>📋 week progress</span>
+        <span id="weeklyProgressStats">0% completed</span>
+      </div>
+    </div>
+
+    <div class="tasks-panel" style="flex: 1;">
+      <div class="selected-date-badge" id="selectedMonthBadge">📌 month of: --</div>
+      <h3>🌳 monthly goals</h3>
+      <ul class="task-list" id="monthlyListContainer">
+        <li class="empty-message">✨ add monthly goals</li>
+      </ul>
+      <div class="add-task-form">
+        <input type="text" id="newMonthlyInput" placeholder="monthly goal..." autocomplete="off">
+        <button id="addMonthlyBtn">➕ add</button>
+      </div>
+      <div class="daily-summary" id="monthlySummary">
+        <span>📋 month progress</span>
+        <span id="monthlyProgressStats">0% completed</span>
+      </div>
+    </div>
+  </div>
+  <footer>soft planner · track progress with sliders · every step fuels your streak 🔥</footer>
+</div>
+<script src="task.js"></script>
+</body>
+</html>
+
+
+  
